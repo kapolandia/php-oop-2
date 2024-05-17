@@ -11,6 +11,8 @@ $collare = new Product('Collare', 5, $dogs);
 $crocchette = new Food('Crocchette', 6, $dogs, ['carne', 'carote']);
 $pallina = new Games('Pallina', 7, $cats, 'Pallina');
 
+$crocchette->setAge("1 mese");
+
 $products = [
     $collare,
     $crocchette,
@@ -62,6 +64,7 @@ $products = [
                                 </div>
                                 <?php if($className === 'Food') { ?>
                                     <div>Ingredienti: <?php echo implode(', ', $product->ingredients); ?> </div>
+                                    <div class="card-text">Età: <?php echo $product->getAge(); ?></div>
                                 <?php } ?>
                             </div>
                         </div>

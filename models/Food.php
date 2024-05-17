@@ -1,7 +1,9 @@
 <?php
 require_once __DIR__ . '/Product.php';
+require_once __DIR__ . '/../Traits/Age.php';
 
 class Food extends Product {
+    use Age;
     public $weight;
     public $ingredients;
 
